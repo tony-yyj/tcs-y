@@ -2,12 +2,16 @@ import {ReactNode} from "react";
 import Footer from "../components/footer.tsx";
 
 interface Props {
-    headerNode: ReactNode,
+    headerNode: ReactNode;
+    rightNode: ReactNode;
+    contentNode: ReactNode;
 }
 
 export default function DefaultLayout(
     {
-        headerNode
+        headerNode,
+        rightNode,
+        contentNode,
     }: Props
 ) {
     return (
@@ -18,14 +22,12 @@ export default function DefaultLayout(
                 </div>
             </div>
             <div className='flex flex-1 justify-center max-w-[1300px] m-auto w-full'>
-                <div className='border-b border-second max-w-[340px] w-full rounded-[4px] p-2'>
-                    left side
-                </div>
+
                 <div className='border-b border-second max-w-[800px] w-full'>
-                    main content
+                    {contentNode}
                 </div>
-                <div className='border-b border-second  max-w-[340px] w-full'>
-                    right side
+                <div className='border-b border-second max-w-[340px] w-full rounded-[4px] p-2'>
+                    {rightNode}
                 </div>
             </div>
             <div>

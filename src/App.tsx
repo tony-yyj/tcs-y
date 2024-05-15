@@ -1,10 +1,16 @@
-import Main from "./pages/main.tsx";
+import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom";
+import BlogPage from "./pages/blog";
+
+const router = createBrowserRouter(
+    createRoutesFromElements(
+        <Route path='/' element={<BlogPage/>}/>
+    )
+)
 
 function App() {
 
     return (
-        <Main/>
-
+        <RouterProvider router={router}/>
 
     )
 }
