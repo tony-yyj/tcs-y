@@ -3,7 +3,7 @@ import Footer from "../components/footer.tsx";
 
 interface Props {
     headerNode: ReactNode;
-    rightNode: ReactNode;
+    rightNode?: ReactNode;
     contentNode: ReactNode;
 }
 
@@ -21,14 +21,16 @@ export default function DefaultLayout(
                     {headerNode}
                 </div>
             </div>
-            <div className='flex flex-1 justify-center max-w-[1300px] m-auto w-full'>
+            <div className='flex flex-1 justify-center max-w-[1300px] m-auto w-full gap-8 mt-6'>
 
-                <div className='border-b border-second max-w-[800px] w-full'>
+                <div className={`pl-8  w-full`}>
                     {contentNode}
                 </div>
-                <div className='border-b border-second max-w-[340px] w-full rounded-[4px] p-2'>
-                    {rightNode}
-                </div>
+                {rightNode &&
+                    <div className=' max-w-[340px] w-full rounded-[4px] pr-8'>
+                        {rightNode}
+                    </div>
+                }
             </div>
             <div>
                 <Footer/>

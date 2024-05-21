@@ -44,7 +44,14 @@ const Nav = () => {
    return (
        <div className='flex items-center gap-4'>
 
-           <div>博客</div>
+           <div>
+               <a href='/'>
+                   博客
+               </a>
+           </div>
+           <div>
+               <a href='/user/create'>user</a>
+           </div>
            <div>
                工具
            </div>

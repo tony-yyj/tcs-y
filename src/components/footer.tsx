@@ -1,6 +1,6 @@
 export default function Footer(){
     return (
-        <div className='flex justify-center flex-col items-center py-4 text-sm gap-2'>
+        <div className=' border-t border-second flex justify-center flex-col items-center py-4 text-sm gap-2'>
             <div>
                 <ul className='flex justify-center items-center gap-4 text-primary/65'>
                     <li className='cursor-pointer hover:text-primary '>

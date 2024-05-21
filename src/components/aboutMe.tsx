@@ -1,6 +1,14 @@
+import {useEffect} from "react";
+import {getUserList} from "../services/user.service.ts";
+
 export default function AboutMe(){
+    useEffect(() => {
+        getUserList().then(res => {
+            console.log('user list', res);
+        });
+    }, []);
     return (
-        <div className='flex justify-center items-center flex-col gap-4 border border-second rounded-lg mx-4 mt-2 p-4'>
+        <div className='flex justify-center items-center flex-col gap-4 border border-second rounded-lg p-4'>
             <div className="w-[100px] h-[100px] bg-contain bg-[url('/images/tony.jpeg')] rounded"/>
             <div>
                 Tony-YYJ
